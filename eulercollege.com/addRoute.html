@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Route</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <link rel="shortcut icon" sizes="196x196" href="images/icon.png"/>
+    <link rel="apple-touch-icon-precomposed" href="images/icon.png"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+     <!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+          
+          <!--Creates back button-->
+          <button class="mdl-layout-icon mdl-button mdl-js-button mdl-button--icon" onclick="history.go(-1);">
+            <i class="material-icons">arrow_back</i>
+          </button>
+          
+            <div class="mdl-layout__header-row">
+                  <!-- Title -->
+                  <span class="mdl-layout-title">New path</span>
+                  <!-- Add spacer, to align navigation to the right -->
+                  <div class="mdl-layout-spacer"></div>
+
+                <!-- Done making path -->
+                <button class="mdl-button mdl-button--raised mdl-button--colored" onclick = "done()">
+                  Done
+                </button>
+            </div>    
+      </header>
+    
+  <main class="mdl-layout__content">
+    <div class="page-content">
+        <!-- start of body content-->
+        
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone full-width">
+                <!-- Create point button -->
+                <button class="mdl-button mdl-js-button mdl-button--primary" onclick = "create()">
+                  Create point
+                </button>
+
+                <!-- Undo button -->
+                <button class="mdl-button mdl-js-button mdl-button--primary" onclick="undo()">
+                  Undo
+                </button>
+            </div>
+            
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone full-width full-height">
+                <!--Adding map-->
+                <div id="addmap"></div>
+            </div>
+        </div>
+        
+        <!-- end of body content-->    
+    </div>
+  </main>
+</div>
+    
+    <!--   JavaScript files:   -->
+    <script src="js/shared.js"></script>
+    <script src="js/utility.js"></script>
+    <script src="js/addRoutePage.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-OJVELp6tjjhrnBSnMc8pqjZgl1L-aHE&callback=initMap"></script>
+</body>
+</html>
