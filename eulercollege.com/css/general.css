@@ -1,0 +1,172 @@
+/* predefined variables */
+:root
+{
+    /* theme colours */
+    --color-1: #1D2731;
+    --color-2: #F6F6E8;
+    --color-3: #F6F6E888;
+    
+    /* theme fonts */
+    --font-1: sans-serif;
+    
+    /* background theme */
+    --background-1: url(images/background/siepia paper.JPG);
+}
+
+
+
+/* Maximise width and height of elements */
+.full-width
+{
+    width: 100%;
+}
+
+.full-height
+{
+    height: 100%;
+}
+
+/* Float the section to the right */
+.right {
+    float: right;
+}
+
+/* Float the section to the middle */
+.middle {
+    float: middle;
+}
+
+/* Float the section to the left */
+.left {
+    float: left;
+}
+
+
+
+/* Style the header with a colored background and some padding */
+.header {
+    overflow: visible;  
+    background-color: var(--color-1);
+    padding: 5px 5px 0px 5px;   
+    border-bottom-style: solid;
+    border-color: var(--color-3);
+    height: 55px;
+}
+
+/* Header title */
+.header span {
+    float: left;
+    color: var(--color-2);
+    text-align: center;
+    padding: 12px 12px 12px 12px;
+    text-decoration: none;
+    font-family: var(--font-1);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Website logo */
+.header span img {
+    padding: 0px 5px 0px 5px;
+    
+}
+
+/* Add media queries for responsiveness - when the screen is 600px wide or less, stack the links on top of each other */ 
+@media screen and (max-width: 600px) {
+    
+    .header {
+        overflow: visible;  
+        background-color: var(--color-1);
+        padding: 5px 5px 0px 5px;   
+        border-bottom-style: solid;
+        border-color: var(--color-3);
+        height: 79px;
+    }
+    
+    /* Header title */
+    .header span {
+        color: var(--color-2);
+        padding: 12px 12px 0px 12px;
+        font-size: 25px;
+        font-weight: bold;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .header div {
+        float: left;
+        padding: 10px 12px 3px 12px;
+    }
+}
+
+
+
+/* Style the tab */
+.tab {
+    float: right;
+    padding: 28px 12px 5px 12px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: 0.3s;
+    font-size: 15px;
+    color: var(--color-2);
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: var(--color-3);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: var(--color-3);
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 0px 15px 0px 12px;
+    -webkit-animation: fadeEffect 1.5s;
+    animation: fadeEffect 1.5s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+
+/* Search bar theme */
+.search-bar-text {
+    width: 250px;
+    height: 20px;
+    border: solid blue;
+    border-radius: 5px;
+}
+
+.search-bar-icon {
+    background-color: inherit;
+    border: none;
+    padding: 8px 5px 5px 8px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.search-bar-icon:hover {
+    background-color: var(--color-2);
+}
